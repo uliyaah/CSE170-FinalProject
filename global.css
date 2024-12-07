@@ -1,0 +1,249 @@
+*{
+  margin:0;
+}
+body{
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  background: #FFFFFF;
+  
+}
+
+.header{
+  position: sticky;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  align-items: center; 
+  width: 100%;
+  justify-content: space-between;
+  background:white;
+  padding: 1rem 2rem;
+}
+
+.navbar{
+  position:sticky;
+  left: 0px;
+  bottom: 0px;
+  
+  padding: 1rem 2rem;
+  margin:0;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+
+
+  background: #FFFFFF;
+  border-top: 1px solid rgba(28, 34, 44, 0.25);
+
+}
+.navbar>button{
+  background: none;
+  border: none;
+
+}
+
+
+
+h1{
+ /* Recommended */
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+
+color: #293241;
+
+
+}
+
+h3{
+
+}
+
+h4{
+  
+}
+
+#homepage-container{
+  margin-left: 5%;
+  width: 100%;
+}
+
+#checkin{
+  width: 100%;
+  display:grid;
+  justify-content: center;  /* Centers horizontally */
+  align-items: center; 
+}
+
+#streak{
+ display:flex;
+ align-items: center; 
+ justify-content: center;  /* Centers horizontally */
+
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+letter-spacing: 0.1em;
+text-transform: uppercase;
+
+color: #EE6C4D;
+
+
+
+ gap: 1rem;
+
+}
+
+/* Rectangle 5 */
+#checkin-button{
+  background: #293241;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: capitalize;
+  width: 200%;
+  padding: 1rem 2rem;
+
+}
+
+
+
+.recs{
+  padding-top: 2rem;
+}
+
+.carousel-container{
+  display:flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+.carousel{
+  width:fit-content;
+  height: fit-content;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px 15px 15px 15px;
+}
+
+.rec-info{
+  box-sizing: border-box;
+
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  left: 0px;
+  top: -50px;
+  padding: 1rem;
+
+  background: #FFFFFF;
+
+
+}
+
+/* image 2 */
+.img-carousel{
+  scale: 102%
+
+}
+
+.forecast-container{
+  padding-top:2rem;
+
+}
+
+#forecast-title{
+  display: flex;
+  align-items:center;
+}
+
+#forecast-title>h1{
+  padding-right:1rem;
+}
+
+.days{
+  display:flex;
+  align-items: center; 
+  justify-content: space-between;
+  margin: 1rem 3rem 0;
+
+}
+
+.location{
+padding: 1rem 1rem;
+
+font-family: 'Instrument Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+color: #3D5A80;
+
+}
+
+#ecl1{
+  position: absolute;
+width: 17px;
+height: 17px;
+left: 77px;
+top: 544px;
+
+background: #FFBD4A;
+}
+
+
+
+/* Ellipse 3 */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: 136px;
+top: 544px;
+
+background: #C15B17;
+
+
+/* Ellipse 5 */
+
+position: absolute;
+width: 25px;
+height: 25px;
+left: 250px;
+top: 540px;
+
+background: #17C11D;
+box-shadow: 0px 0px 5px 1px #17C11D;
+
+
+/* Ellipse 6 */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: 313px;
+top: 544px;
+
+background: #17C11D;
+
+
+/* Ellipse 4 */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: 195px;
+top: 544px;
+
+background: #FFBD4A;
