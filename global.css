@@ -27,6 +27,21 @@ button {
   z-index: 2;
 }
 
+#search-bar {
+  display: none;
+  margin-left: 0;
+  width: 70%;
+  padding: .3rem .5rem;
+  font-size: 16px;
+  border-radius: 20px;
+  border-style: none;
+  border:#0000002d solid 1px;
+}
+
+#search-button {
+  cursor: pointer;
+}
+
 .navbar{
   position:sticky;
   left: 0px;

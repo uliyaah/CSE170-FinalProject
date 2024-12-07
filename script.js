@@ -122,6 +122,65 @@ function renderForecasts() {
   });
 }
 
+document.getElementById('search').addEventListener('click', function() {
+  // Get the header element (the first element with class 'header')
+  var header = document.getElementsByClassName('header')[0];
+  var h1 = header.querySelector('h1');
+  
+  // Remove the h1 element
+  h1.remove();
+  
+  // Create or get the existing search bar
+  var searchBar = document.getElementById('search-bar');
+  if (!searchBar) {
+    searchBar = document.createElement('input');
+    searchBar.type = 'text';
+    searchBar.placeholder = 'Search...';
+    searchBar.id = 'search-bar';
+  }
+  
+  // Show the search bar
+  searchBar.style.display = 'block';
+
+  // Insert the search bar to the right of the search icon
+  var searchIcon = header.querySelector('#search');
+  header.insertBefore(searchBar, searchIcon.nextSibling);
+
+  // Add event listener for Enter key to restore the header
+  searchBar.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      restoreHeader(header, h1);
+    }
+  });
+
+  // Add event listener for clicking outside to restore the header
+  document.addEventListener('click', function(event) {
+    if (!header.contains(event.target)) {
+      restoreHeader(header, h1);
+    }
+  });
+});
+
+// Function to restore the original header
+function restoreHeader(header, originalH1) {
+  var searchBar = document.getElementById('search-bar');
+  if (searchBar) {
+    searchBar.remove(); // Remove the search bar
+  }
+
+  // Insert the original h1 element after the first element in the header
+  header.insertBefore(originalH1, header.children[1]);
+
+  // Remove the event listener for clicking outside
+  document.removeEventListener('click', function(event) {
+    if (!header.contains(event.target)) {
+      restoreHeader(header, originalH1);
+    }
+  });
+}
+
+
+
 // Initialize forecasts
 renderForecasts();
 
@@ -149,3 +208,4 @@ function closePopup() {
 function noPage() {
   alert("This page has not been implemented");
 }
+
