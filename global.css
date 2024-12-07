@@ -7,17 +7,24 @@ body{
   background: #FFFFFF;
   
 }
+button {
+  cursor: pointer;  /* Changes the cursor to a hand icon when hovering over the button */
+
+}
 
 .header{
   position: sticky;
   left: 0px;
   top: 0px;
+
   display: flex;
   align-items: center; 
-  width: 100%;
+
   justify-content: space-between;
   background:white;
   padding: 1rem 2rem;
+
+  z-index: 2;
 }
 
 .navbar{
@@ -45,8 +52,7 @@ body{
 
 
 h1{
- /* Recommended */
-
+ 
 font-family: 'Instrument Sans';
 font-style: normal;
 font-weight: 700;
@@ -55,46 +61,33 @@ line-height: 29px;
 
 color: #293241;
 
-
-}
-
-h3{
-
-}
-
-h4{
-  
 }
 
 #homepage-container{
-  margin-left: 5%;
-  width: 100%;
+  margin: 0 0 0 5%;
+  overflow: hidden;
+
 }
 
 #checkin{
-  width: 100%;
-  display:grid;
-  justify-content: center;  /* Centers horizontally */
-  align-items: center; 
+  display:vertical-align;
+  margin-right: 5%;
+
 }
 
 #streak{
- display:flex;
- align-items: center; 
- justify-content: center;  /* Centers horizontally */
+  display:flex;
+  align-items: center; 
+  justify-content: center;  /* Centers horizontally */
 
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-/* identical to box height */
-letter-spacing: 0.1em;
-text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  letter-spacing: 0.1em;
 
-color: #EE6C4D;
-
-
-
- gap: 1rem;
+  color: #EE6C4D;
+  gap: 1rem;
 
 }
 
@@ -102,62 +95,107 @@ color: #EE6C4D;
 #checkin-button{
   background: #293241;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-style: none;
   border-radius: 10px;
-
+  margin: 1rem 0;
   color: #FFFFFF;
-  font-style: normal;
+
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   text-align: center;
   text-transform: capitalize;
-  width: 200%;
-  padding: 1rem 2rem;
-
+  width: 100%;
+  padding: 1rem 0;
+  display:flex;
+  align-items: center; 
+  justify-content:center;
+  gap: .5rem;
 }
-
 
 
 .recs{
   padding-top: 2rem;
+  margin-right:0%;
+
+}
+
+.recs>h1{
+  margin-bottom: 1rem;
 }
 
 .carousel-container{
-  display:flex;
+  display: flex; /* Set container to flexbox */
+  flex-direction: row; /* Align items in a row */
+  width: 100%;
   align-items: center; 
-  justify-content: center;
+  justify-content:flex-start;
+  margin-left: 7%;
+  margin-right:0%;
+  overflow-x: scroll;
+
+  z-index: 1;
+
 }
 
 .carousel{
-  width:fit-content;
-  height: fit-content;
+  flex-shrink: 0;
+  width: 80%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 15px 15px 15px 15px;
+  scale: 95%;
+}
+
+
+/* image 2 */
+.img-carousel{
+  width: 100%; /* Fill the width of the container */
+  height: 100%; /* Fill the height of the container */
+  object-fit: cover;
+  border-radius: 15px 15px 15px 15px;
+
 }
 
 .rec-info{
   box-sizing: border-box;
-
   position: relative;
-  width: 100%;
-  height: fit-content;
   left: 0px;
-  top: -50px;
+  top: -30px;
   padding: 1rem;
+  height: 2.8rem;
 
   background: #FFFFFF;
+}
+
+.low-crowd{
+  display: flex;
+  align-items: center; 
+  margin: .5rem 1rem;
+
+  /* Crowds Lowest at 6:30 AM */
+
+font-style: normal;
+font-weight: 700;
+font-size: 11px;
+line-height: 13px;
+
+color: #000000;
 
 
 }
 
-/* image 2 */
-.img-carousel{
-  scale: 102%
-
+.rec-info>.location{
+  margin: 0 .2rem;
 }
+
+b{
+  margin-left: .2rem;
+  color:#EE6C4D;
+}
+
 
 .forecast-container{
-  padding-top:2rem;
+  padding:2rem 0;
 
 }
 
@@ -179,7 +217,8 @@ color: #EE6C4D;
 }
 
 .location{
-padding: 1rem 1rem;
+margin-top: 1rem;
+margin-left:  1rem;
 
 font-family: 'Instrument Sans';
 font-style: normal;
@@ -189,61 +228,27 @@ line-height: 20px;
 /* identical to box height */
 
 color: #3D5A80;
-
+cursor: pointer;
+width:fit-content
 }
 
-#ecl1{
-  position: absolute;
-width: 17px;
-height: 17px;
-left: 77px;
-top: 544px;
-
-background: #FFBD4A;
+.beach-forecast{
+  display:flex;
+  align-items: center; 
+  justify-content: space-between;
+  margin: 1rem 3.5rem 0 3rem;
 }
 
+#info{
+  cursor: pointer;
+}
 
+.header>svg{
+  cursor: pointer;
+}
 
-/* Ellipse 3 */
+.popup {
+  display: none;  /* Hidden by default */
+  /* Add any other styles you need */
+}
 
-position: absolute;
-width: 17px;
-height: 17px;
-left: 136px;
-top: 544px;
-
-background: #C15B17;
-
-
-/* Ellipse 5 */
-
-position: absolute;
-width: 25px;
-height: 25px;
-left: 250px;
-top: 540px;
-
-background: #17C11D;
-box-shadow: 0px 0px 5px 1px #17C11D;
-
-
-/* Ellipse 6 */
-
-position: absolute;
-width: 17px;
-height: 17px;
-left: 313px;
-top: 544px;
-
-background: #17C11D;
-
-
-/* Ellipse 4 */
-
-position: absolute;
-width: 17px;
-height: 17px;
-left: 195px;
-top: 544px;
-
-background: #FFBD4A;
