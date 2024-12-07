@@ -62,7 +62,7 @@ function createStar() {
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("width", "25");
   svg.setAttribute("height", "25");
-  svg.setAttribute("viewBox", "0 0 17 17");
+  svg.setAttribute("viewBox", "0 0 15 15");
   svg.setAttribute("fill", "#17C11D");
 
   const star = document.createElementNS("http://www.w3.org/2000/svg", "path");
