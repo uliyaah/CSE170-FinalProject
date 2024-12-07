@@ -107,6 +107,11 @@ function renderForecasts() {
     location.classList.add("location");
     location.textContent = beach.name;
 
+    // Add event listener for location click
+    location.addEventListener('click', function() {
+      noPage();  // Call the noPage() function when the location is clicked
+    });
+
     // Create beach forecast container
     const beachForecast = document.createElement("div");
     beachForecast.classList.add("beach-forecast");
@@ -121,6 +126,7 @@ function renderForecasts() {
     forecastList.appendChild(forecast);
   });
 }
+
 
 document.getElementById('search').addEventListener('click', function() {
   // Get the header element (the first element with class 'header')
@@ -179,30 +185,28 @@ function restoreHeader(header, originalH1) {
   });
 }
 
+  // Initialize forecasts
+  renderForecasts();
 
+  // Select all elements with the class 'location'
+  const locations = document.getElementsByClassName('location');
 
-// Initialize forecasts
-renderForecasts();
-
-
+  // Loop through all the elements and add the event listener to each
+  for (let i = 0; i < locations.length; i++) {
+    locations[i].addEventListener('click', function() {
+      alert("This would navigate to the detailed forecast if it was implemented");
+    });
+  }
 });
 
-function openPopup() {
-  const popup = document.getElementById("popup");
-  if (popup) {
-      popup.style.display = "block";  // Show the popup
-  } else {
-      console.error("Popup element not found!");
-  }
+function recPop() {
+  var popup = document.getElementById("rec-pop");
+  popup.classList.toggle("show");
+  document.getElementsByClassName('info')[0]
 }
-
-function closePopup() {
-  const popup = document.getElementById("popup");
-  if (popup) {
-      popup.style.display = "none";  // Hide the popup
-  } else {
-      console.error("Popup element not found!");
-  }
+function forPop() {
+  var popup = document.getElementById("forecast-pop");
+  popup.classList.toggle("show");
 }
 
 function noPage() {
